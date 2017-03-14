@@ -16,3 +16,8 @@ Purpose :
 For study basic React to call an API 
 
 Start Project by type `npm start` in command line or terminal
+
+**recommended to use `componentDidMount` in case of calling an API or get Data that doesn't know when it will finished
+
+This is React LifeCycle 
+![Alt text](ReactLifeCycle.png?raw=true "Cineplex Model") 
