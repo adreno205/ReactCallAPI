@@ -35,7 +35,8 @@ class App extends Component {
       method: 'GET',
       url: 'http://api.coindesk.com/v1/bpi/currentprice/THB.json',
       success: (comments) => {
-        comments: JSON.stringify(this.state.comments,null,4)
+        // comments: jQuery.parseJSON(comments)
+        comments = JSON.stringify(JSON.parse(comments),null,4)
         this.setState({ comments }) }
   }); }
 
@@ -66,7 +67,7 @@ class App extends Component {
         <div>
           <pre>{JSON.stringify(this.state.text,null,4)}</pre>
         </div>          
-        <div><h2>This is JSON @ WillMount</h2></div>
+        <div><h2>This is pretty JSON @ WillMount</h2></div>
           <pre>{this.state.comments}</pre>
         </div>
         <div><h2>This is pretty JSON @ DidMount</h2></div>
